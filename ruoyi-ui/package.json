@@ -5,10 +5,12 @@
   "author": "若依",
   "license": "MIT",
   "scripts": {
-    "dev": "vue-cli-service serve",
-    "build:prod": "vue-cli-service build",
-    "build:stage": "vue-cli-service build --mode staging",
-    "preview": "node build/index.js --preview",
+    "danson:comment": "export NODE_OPTIONS=--openssl-legacy-provider && 为新增内容，因为node新版本带来的问题: http://doc.ruoyi.vip/ruoyi-vue/other/faq.html#nodejs%E7%89%88%E6%9C%AC%E8%BF%87%E9%AB%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88",
+    "dev-bak": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
+    "dev": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve --copy",
+    "build:prod": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",
+    "build:stage": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build --mode staging",
+    "preview": "export NODE_OPTIONS=--openssl-legacy-provider && node build/index.js --preview",
     "lint": "eslint --ext .js,.vue src"
   },
   "husky": {
