@@ -87,6 +87,42 @@ export const constantRoutes = [
         meta: { title: '个人中心', icon: 'user' }
       }
     ]
+  },
+  {
+    name: 'Iframe',
+    path: '/iframe',
+    component: Layout,
+    // hidden: false,
+    redirect: 'noRedirect',
+    alwaysShow: true,
+    meta: {
+      title: 'IFrame',
+      icon: 'system',
+    },
+    children: [
+      {
+        path: 'ruoyi',
+        component: Layout,
+        name: 'IframeDemo1',
+        meta: {
+          title: '若依官网',
+          icon: 'user',
+          noCache: true,
+          link: 'http://ruoyi.vip'
+        }
+      },
+      {
+        path: 'cat',
+        component: Layout,
+        name: 'IframeDemo2',
+        meta: {
+          title: 'Cat监控',
+          icon: 'user',
+          noCache: true,
+          link: 'https://cat.neulive.net/cat/r/t?ip=All&queryname=&domain=vkson-gateway-boss'
+        }
+      },
+    ]
   }
 ]
 
