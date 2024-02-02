@@ -1,6 +1,9 @@
 import store from '@/store'
 import router from '@/router';
 
+/**
+ * 文档: https://doc.ruoyi.vip/ruoyi-vue/document/qdsc.html
+ */
 export default {
   // 刷新当前tab页签
   refreshPage(obj) {
